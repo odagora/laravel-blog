@@ -12,5 +12,12 @@
 @import "node_modules/bulma/bulma";
 
 //Bulma Vue Modules
-@import "node_modules/buefy/src/scss/buefy"
+@import "node_modules/buefy/src/scss/buefy";
 
+//Custom SASS Pages
+//Overrides a few things and the rest is inherited from the basic config above
+@import "overrides";
+//File to specify class helpers
+@import "helpers";
+//Main styles file
+@import "styles";
