@@ -8,10 +8,12 @@ Vue.use(Buefy);
 // Vue.component('example', require('./components/Example.vue'));
 
 //Vue object creation to work in blade templates.
-var app = new Vue({
-	el: '#app',
-	data: {}
-})
+// const app = new Vue({
+// 	el: '#app',
+// 	data: {
+// 		auto_password: true
+// 	}
+// });
 
 $(document).ready(function(){
 	//Dropdowns

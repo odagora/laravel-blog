@@ -984,10 +984,12 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
 // Vue.component('example', require('./components/Example.vue'));
 
 //Vue object creation to work in blade templates.
-var app = new Vue({
-	el: '#app',
-	data: {}
-});
+// const app = new Vue({
+// 	el: '#app',
+// 	data: {
+// 		auto_password: true
+// 	}
+// });
 
 $(document).ready(function () {
 	//Dropdowns

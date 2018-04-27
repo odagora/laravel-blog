@@ -30,10 +30,11 @@
                         <li><a href="#">
                             <span class="icon"><i class="fa fa-fw m-r-10 fa-bell"></i></span>Notifications</a>
                         </li>
-                        <li><a href="#">
+                        <li><a href="{{route('manage.dashboard')}}">
                             <span class="icon"><i class="fa fa-fw m-r-10 fa-cog"></i></span>Manage</a></li>
                         <li class ="separator"></li>
-                        <li><a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementbyId('logout.form').submit()">
+                        <li><a href="{{route('logout')}}" onclick="event.preventDefault();
+                     document.getElementById('logout-form').submit();">
                           <span class="icon"><i class="fa fa-fw m-r-10 fa-sign-out"></i></span>Logout</a>
                           @include('_includes.forms.logout')
                         </li>
