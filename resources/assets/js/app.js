@@ -15,9 +15,4 @@ Vue.use(Buefy);
 // 	}
 // });
 
-$(document).ready(function(){
-	//Dropdowns
-	$('button.dropdown').hover(function(e){
-		$(this).toggleClass('is-open');
-	})
-});
+require('./manage');
