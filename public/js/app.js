@@ -30293,23 +30293,45 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* 37 */
 /***/ (function(module, exports) {
 
+//Define the accordions menu constant
 var accordions = document.getElementsByClassName('has-submenu');
 
+//Define the side menu sliding constant
+var adminSlideoutButton = document.getElementById('admin-slideout-button');
+
+function setSubmenuStyles(submenu, maxHeight, margins) {
+  submenu.style.maxHeight = maxHeight;
+  submenu.style.marginTop = margins;
+  submenu.style.marginBottom = margins;
+}
+
+if (adminSlideoutButton) {
+  adminSlideoutButton.onclick = function () {
+    // this.classList.toggle('is-active');
+    document.getElementById('admin-side-menu').classList.toggle('is-active');
+  };
+}
+
 for (var i = 0; i < accordions.length; i++) {
+  //Detect if menu option is active to open the accordion
+  if (accordions[i].classList.contains('is-active')) {
+    var submenu = accordions[i].nextElementSibling;
+    submenu.style.maxHeight = submenu.scrollHeight + "px";
+    submenu.style.marginTop = "0.75em";
+    submenu.style.marginBottom = "0.75em";
+  }
+
+  //Define the event on menu option click
   accordions[i].onclick = function () {
     this.classList.toggle('is-active');
 
     var submenu = this.nextElementSibling;
     if (submenu.style.maxHeight) {
       // menu is open, we need to close it now
-      submenu.style.maxHeight = null;
-      submenu.style.marginTop = null;
-      submenu.style.marginBottom = null;
+      setSubmenuStyles(submenu, null, null);
     } else {
       // meny is close, so we need to open it
-      submenu.style.maxHeight = submenu.scrollHeight + "px";
-      submenu.style.marginTop = "0.75em";
-      submenu.style.marginBottom = "0.75em";
+      setSubmenuStyles(submenu, submenu.scrollHeight + "px", "0.75em");
     }
   };
 }
