@@ -28,3 +28,22 @@ a.is-muted:hover {
 .navbar-burger {
 	border: none;
 }
+
+#navMenu {
+	&.is-active {
+		position: absolute;
+		left: auto;
+		right: 0;
+		margin-top: 52px;
+		z-index: 20;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+	&.is-active hr {
+		display: block;
+	}
+	&.is-active .navbar-dropdown .is-hoverable,
+	&.is-active .navbar-dropdown {
+		padding: 0;
+	}
+}

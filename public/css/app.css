@@ -16221,6 +16221,25 @@ a.is-muted:hover {
   border: none;
 }
 
+#navMenu.is-active {
+  position: absolute;
+  left: auto;
+  right: 0;
+  margin-top: 52px;
+  z-index: 20;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+#navMenu.is-active hr {
+  display: block;
+}
+
+#navMenu.is-active .navbar-dropdown .is-hoverable,
+#navMenu.is-active .navbar-dropdown {
+  padding: 0;
+}
+
 .m-t-5 {
   margin-top: 5px !important;
 }

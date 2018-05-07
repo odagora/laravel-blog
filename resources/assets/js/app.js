@@ -15,4 +15,5 @@ Vue.use(Buefy);
 // 	}
 // });
 
+require('./main');
 require('./manage');
